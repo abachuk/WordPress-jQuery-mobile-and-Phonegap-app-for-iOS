@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jqm.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Blog</title>
+    </head>
+    <body>
+    <div id="blog-page" data-role="page">
+    <div data-role="header">
+        <h1><i class="icon-home"></i> Alex Bachuk Blog</h1>
+    </div><!-- /#header -->
+    
+    <div id="blog-content" data-role="content">
+        
+        
+        <div id="blog-data"></div>
+
+
+        <script id="blog-template" type="text/x-handlebars-template">
+            <ul data-role="listview" data-inset="true" id="all-posts">
+            
+            {{#each posts}}
+                
+                <li><a data-transition="slide" href="single.html?{{@index}}">{{title}}</a></li>
+
+            {{/each}}
+            </ul>
+        </script>
+
+
+        <a data-role="button" data-transition="slide" href="index.html">Home</a>
+        <a data-role="button" data-transition="slide" href="blog.html">Blog</a>
+        <a data-role="button" data-transition="slide" href="portfolio.html">My Work</a>
+        <a data-role="button" data-transition="slide" href="contact.html">Contact</a>
+    </div><!-- /#home-page -->
+    
+    <div id="footer" data-role="footer">
+        <h1><i class="icon-coffee"></i> 2013 - built with phonegap and jquery mobile</h1>
+    </div><!-- /#footer -->
+
+
+
+
+    
+
+
+
+        <script type="text/javascript" src="cordova-2.7.0.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.js"></script>
+        <script type="text/javascript" src="js/libs/jqm.js"></script>
+        <script type="text/javascript" src="js/libs/handlebars.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            
+            app.blog();
+        </script>
+    </body>
+</html>
